@@ -1,0 +1,79 @@
+{
+  "name": "debugmcp",
+  "version": "0.1.0",
+  "description": "Full-stack debug MCP server — give Claude Code eyes on your frontend, backend, and database",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "debugmcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "debug",
+    "full-stack",
+    "database",
+    "browser",
+    "playwright",
+    "claude",
+    "claude-code",
+    "ai",
+    "sql",
+    "postgres",
+    "mysql",
+    "sqlite",
+    "mssql",
+    "model-context-protocol",
+    "debugging",
+    "devtools",
+    "frontend",
+    "backend"
+  ],
+  "author": "Sani Savaliya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanisavaliya/debugmcp"
+  },
+  "homepage": "https://github.com/sanisavaliya/debugmcp#readme",
+  "bugs": {
+    "url": "https://github.com/sanisavaliya/debugmcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "commander": "^13.0.0",
+    "playwright": "^1.59.1",
+    "zod": "^3.24.0"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.0.0",
+    "mssql": "^11.0.1",
+    "mysql2": "^3.12.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/mssql": "^9.1.5",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
